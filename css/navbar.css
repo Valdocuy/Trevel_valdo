@@ -1,0 +1,222 @@
+.navbar {
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.949);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    flex-direction: row;
+    margin: 0 auto;
+}
+.navbar .btn {
+    margin-left: 10px;
+    margin-top: 2px;
+  }
+
+.nav-link {
+    position: relative;
+    padding-right: .5rem !important;
+    padding-left: .5rem !important;
+    color: #000;
+    transition: color 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #000;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+    background: #000;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-brand {
+    margin-right: auto;
+    color: #000;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* corusel img */
+.carousel-item img {
+    max-height: 600px;
+    width: auto; 
+    margin: 0 auto;
+    filter: brightness(0.7); 
+}
+/* end corousel */
+
+
+/* slider */
+@keyframes slideAnimation {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  #imageSlider .col-md-2 {
+    animation: slideAnimation 6s infinite;
+  }
+/* slider */
+
+/* Style untuk container about */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; 
+    background-color: #f0f0f0;
+    padding-top: 20px;
+  }
+  
+  /* Style untuk konten about */
+  .about-content {
+    max-width: 400px; 
+    padding: 5px; 
+    text-align: center;
+    animation: slideInFromLeft 1s ease-in-out;
+  }
+  
+  /* Animasi masuk dari kiri */
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Style untuk gambar about */
+  .about-content img {
+    margin-top: 10px; 
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+/* titel judul */
+.title {
+    display: inline-block;
+    padding: 6px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: rgb(129, 129, 129); /* Ganti dengan path gambar latar belakang */
+    background-size: cover;
+    width: 80vw; /* Atur lebar judul sama dengan lebar viewport */
+    font-size: 20px;
+  }
+/* titel judul end */
+
+
+
+
+/* galery */
+.gallery-container {
+    padding: 20px;
+  }
+  .gallery-item {
+    margin-bottom: 10px;
+    overflow: hidden; /* Ensure child elements are contained */
+  }
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+    opacity: 0.5; /* Initial state: slightly opaque */
+  }
+  .gallery-item img:hover {
+    opacity: 1; /* Hover state: fully opaque */
+  }
+  .masonry {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .masonry .gallery-item {
+    flex: 1 1 calc(33.333% - 10px); /* 3 columns with 10px gap */
+    box-sizing: border-box;
+  }
+  @media (max-width: 992px) {
+    .masonry .gallery-item {
+      flex: 1 1 calc(50% - 10px); /* 2 columns with 10px gap */
+    }
+  }
+  @media (max-width: 768px) {
+    .masonry .gallery-item {
+      flex: 1 1 100%; /* 1 column full width */
+    }
+  }
+/* galery end */
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 20px;
+  }
+  .contact-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  .contact-image {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .form-group label {
+    font-weight: bold;
+  }
+  .form-control {
+    border-radius: 5px;
+  }
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  .btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
